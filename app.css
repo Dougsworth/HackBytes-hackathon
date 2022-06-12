@@ -1,0 +1,215 @@
+* {
+  list-style: none;
+  list-style-type: none;
+}
+
+body {
+  background: #f6fbff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Nuosu SIL", serif;
+}
+.grid-container {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#imagegallery {
+  width: 150px;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+#imagegallery:hover img {
+  filter: grayscale(0);
+}
+#imagegallery img {
+  width: 100%;
+  height: auto;
+  transition: all 0.25s ease-in-out;
+  filter: grayscale(1);
+  border-radius: 5px;
+}
+.img-fluid {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+p {
+  margin: 5px 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+#mainNavbar {
+  background: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  height: 10vh;
+}
+
+#mainNavbar {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+#mainNavbar .nav-link {
+  color: #003566;
+}
+#mainNavbar .nav-link:hover {
+  color: #ffc300;
+}
+
+#mainNavbar .navbar-brand {
+  color: #ffc300;
+}
+
+#headingGroup span {
+  color: #ffc300;
+}
+#headingGroup h1 {
+  color: #003566;
+}
+#Learn {
+  display: flex;
+  width: 90vw;
+}
+#About {
+  padding: 20px;
+}
+#About p {
+  display: none;
+}
+
+.instrument {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #ffffff;
+  outline: black;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.instrument h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.instrument.active {
+  flex: 5;
+}
+
+.instrument.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* --------------------------Sign Up Form Star------------------------------------------- */
+/*add full-width input fields*/
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+/* set a style for all buttons*/
+
+button {
+  background-color: #ffffff;
+  border-color: #003566;
+  color: #003566;
+  padding: 15px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 100%;
+}
+/*set styles for the cancel button*/
+
+.cancelbtn {
+  padding: 15px 20px;
+  background-color: #ffffff;
+}
+/*float cancel and signup buttons and add an equal width*/
+
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+/*add padding to container elements*/
+
+.container {
+  padding: 16px;
+}
+/*clear floats*/
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*styles for cancel button and signup button
+   on extra small screens*/
+
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+#Contact h2 {
+  text-align: center;
+}
+
+/* --------------------------Sign Up Form End------------------------------------------- */
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .instrument:nth-of-type(4),
+  .instrument:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .instrument {
+    display: none;
+  }
+
+  #About p {
+    display: block;
+  }
+  #About h1 {
+    color: #003566;
+    font-weight: bold;
+  }
+  #About p {
+    color: #ffc300;
+  }
+}
